@@ -1,0 +1,5 @@
+alias vim="nvim"
+alias ls="ls --color=auto"
+alias play='play() { mpv --hwdec=vaapi --really-quiet --ytdl-format="bestvideo[height<=1440]+bestaudio/best" $(wl-paste) & }; play'
+alias mpv="mpv --hwdec=vaapi"
+alias suspend="systemctl suspend"
