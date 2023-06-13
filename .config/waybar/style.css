@@ -89,7 +89,8 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #mpd,
-#custom-power {
+#custom-power,
+#custom-sleep {
     
     border-radius: 5px;
     margin-top: 5px;
@@ -165,7 +166,6 @@ label:focus {
 }
 
 #pulseaudio {
-    color: #000000;
 }
 
 #pulseaudio.muted {

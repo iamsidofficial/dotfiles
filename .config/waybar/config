@@ -5,13 +5,17 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["wlr/workspaces" ],
+    "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad" ],
     //"modules-center": ["sway/window"],
-    "modules-right": ["network", "cpu", "memory", "temperature", "backlight", "battery", "clock", "tray"],
+    "modules-right": ["custom/sleep", "idle_inhibitor", "network", "cpu", "memory", "temperature", "pulseaudio", "backlight", "battery", "clock", "tray"],
     // Modules configuration
 
     "custom/power" : {
     	"format": "󰐥",
+      },
+    "custom/sleep" : {
+    	"format" : "󰒲",
+	"on-click" : "systemctl suspend"
       },
      "wlr/workspaces": {
          "disable-scroll": true,
@@ -107,7 +111,9 @@
     "backlight": {
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+	"on-scroll-up": "light -A 2",
+	"on-scroll-down": "light -U 2"
     },
     "battery": {
         "states": {
